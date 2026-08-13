@@ -1,0 +1,1 @@
+window.DMREDRAFT={ready:false,season:null,adp:{},proj:{},vegas:{}};
