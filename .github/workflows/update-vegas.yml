@@ -1,0 +1,42 @@
+name: Update DownMetric Vegas Signals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 14 * * 2,4,6'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: downmetric-vegas-update
+  cancel-in-progress: true
+
+jobs:
+  update-vegas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Update Vegas signals
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: node scripts/update-vegas.mjs
+
+      - name: Commit updated signals
+        run: |
+          if git diff --quiet -- vegas-signals.json; then
+            echo "No Vegas signal changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vegas-signals.json
+          git commit -m "Update DownMetric Vegas signals"
+          git push
