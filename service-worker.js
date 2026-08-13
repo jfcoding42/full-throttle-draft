@@ -1,10 +1,11 @@
-const CACHE='downmetric-v10';
+const CACHE='downmetric-v11';
 const ASSETS=['./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
 function patchHtml(text){
-  text=text.replaceAll('Full Throttle','DownMetric').replaceAll('FULL THROTTLE','DOWNMETRIC');
+  text=text.replaceAll('FULL THROTTLE','DOWNMETRIC').replaceAll('Full Throttle','DownMetric').replaceAll('FT #','DM #');
   text=text.replace('60% DownMetric + 40% dynasty startup market. Market rank is no longer Sleeper search order.','60% DownMetric + 40% dynasty startup market.');
+  text=text.replace('Adaptive Scouting Formula','DownMetric Scouting Formula');
   text=text.replace('<title>DownMetric Draft Lab</title>','<title>DownMetric | Fantasy Football Intelligence</title>');
   const css=`<style id="dm-ui">.dmnav{max-width:1400px;margin:10px auto 0;padding:0 14px;display:flex;gap:7px;overflow-x:auto}.dmtab{width:auto;min-width:max-content;padding:9px 13px;min-height:38px;border:1px solid #31553b;background:#0a1d12;color:#d9e4da;border-radius:10px;text-transform:none;font-size:12px}.dmtab.active{background:#f2c94c;color:#172014}.dmpane{max-width:1400px;margin:14px auto;padding:0 14px}.dmpane.hidden{display:none}.dmcard{background:linear-gradient(145deg,#102719fa,#08170efa);border:1px solid #31553b;border-radius:14px;padding:15px}.dmgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.dmroster{display:grid;gap:7px}.dmplayer{display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px;border:1px solid #31553b;border-radius:10px;background:#07170e}.dmtag{font-size:10px;font-weight:800;color:#f2c94c}.dmbrand{max-width:1400px;margin:auto;padding:8px 14px 0;color:#a9b8aa;font-size:11px}.dmbrand b{color:#f2c94c}@media(max-width:900px){.dmgrid{grid-template-columns:1fr}}@media(max-width:650px){.dmnav{position:sticky;top:0;z-index:35;background:#06120bf5;padding-top:8px;padding-bottom:8px}.dmtab{font-size:11px;padding:8px 10px}}</style>`;
   const nav=`<div class="dmbrand"><b>DOWNMETRIC</b> • Fantasy Football Intelligence</div><nav class="dmnav"><button class="dmtab active" data-dm="draft">🏈 Draft Lab</button><button class="dmtab" data-dm="team">🏠 My Team</button><button class="dmtab" data-dm="lineup">📋 Lineup</button><button class="dmtab" data-dm="waivers">🔄 Waivers</button><button class="dmtab" data-dm="trades">🤝 Trades</button><button class="dmtab" data-dm="players">📈 Players</button></nav>`;
