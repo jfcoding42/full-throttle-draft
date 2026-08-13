@@ -1,12 +1,12 @@
 {
-  "name": "Full Throttle Football Draft Lab",
-  "short_name": "Full Throttle",
+  "name": "DownMetric Fantasy Football Intelligence",
+  "short_name": "DownMetric",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#07140d",
   "theme_color": "#0b5a2b",
-  "description": "Dynasty fantasy football startup draft assistant with dynasty, Vegas, historical, and roster-fit signals.",
+  "description": "Fantasy football intelligence for dynasty drafts, roster management, lineups, waivers, trades, market value, historical data, and Vegas signals.",
   "icons": [
     {
       "src": "icon-192.png",
