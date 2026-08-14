@@ -1,0 +1,44 @@
+name: Generate DownMetric Icons
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'icon-source.svg'
+      - '.github/workflows/generate-icons.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install renderer
+        run: pip install cairosvg
+      - name: Generate icons
+        run: |
+          python - <<'PY'
+          import cairosvg
+          sizes={
+            'icon-512.png':512,
+            'icon-192.png':192,
+            'apple-touch-icon.png':180,
+            'favicon-64.png':64,
+            'favicon-32.png':32,
+          }
+          for name,size in sizes.items():
+              cairosvg.svg2png(url='icon-source.svg', write_to=name, output_width=size, output_height=size)
+          PY
+      - name: Commit generated icons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add icon-512.png icon-192.png apple-touch-icon.png favicon-64.png favicon-32.png
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Regenerate fitted DownMetric icons"
+          git push
