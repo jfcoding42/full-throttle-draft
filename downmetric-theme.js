@@ -60,6 +60,7 @@ function mount(){
  const h=document.querySelector('header .wrap h1');
  if(h&&!h.querySelector('.dm-lockup')) h.innerHTML='<span class="dm-lockup"><img src="./icon-192.png?v=25" alt="DownMetric"><span class="dm-lockup-copy"><span class="dm-lockup-name">DOWN<span>METRIC</span></span><span class="dm-lockup-tag">Fantasy Football Intelligence</span></span></span>';
  const sub=document.getElementById('subtitle'); if(sub&&!sub.dataset.dmTheme){sub.dataset.dmTheme='1';sub.textContent='DRAFT SMARTER • MANAGE SMARTER • WIN MORE';}
+ const recs=document.getElementById('recs');const recCard=recs&&recs.closest('.card');const recTitle=recCard&&recCard.querySelector('h2');if(recTitle)recTitle.textContent='Recommended Picks';
  let m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content','#07100a');
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
