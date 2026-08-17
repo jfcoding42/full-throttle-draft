@@ -9,7 +9,7 @@ header{background:rgba(5,8,6,.96)!important;border-bottom:1px solid #1e2922!impo
 header .wrap{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(330px,470px)!important;grid-template-areas:"brand account" "sub account"!important;column-gap:28px!important;row-gap:6px!important;align-items:center!important;padding:18px 18px 16px!important}
 header h1{grid-area:brand!important;font-size:0!important;margin:0!important;text-transform:none!important;display:flex!important;align-items:center!important;min-width:0!important}
 .dm-lockup{display:flex;align-items:center;gap:14px;min-width:0}
-.dm-lockup img{width:60px;height:60px;display:block;object-fit:contain;border-radius:0!important;flex:0 0 60px;box-shadow:none!important}
+.dm-lockup img{width:60px;height:60px;display:block;object-fit:contain;object-position:center center;border-radius:0!important;flex:0 0 60px;box-shadow:none!important;transform:none!important}
 .dm-lockup-copy{display:flex;flex-direction:column;justify-content:center;min-width:0;line-height:1}
 .dm-lockup-name{font-size:25px;font-weight:900;letter-spacing:-.045em;font-style:italic;color:#f4f6f4;white-space:nowrap}
 .dm-lockup-name span{color:#4fc43a}
@@ -94,8 +94,8 @@ let s=document.getElementById('dmPremiumTheme');if(!s){s=document.createElement(
 function mount(){
  document.body.classList.add('dm-premium');
  const h=document.querySelector('header .wrap h1');
- if(h&&!h.querySelector('.dm-lockup'))h.innerHTML='<span class="dm-lockup"><img src="./downmetric-logo.png?v=28" alt="DownMetric"><span class="dm-lockup-copy"><span class="dm-lockup-name">DOWN<span>METRIC</span></span><span class="dm-lockup-tag">Fantasy Football Intelligence</span></span></span>';
- const existing=h?.querySelector('.dm-lockup img');if(existing)existing.src='./downmetric-logo.png?v=28';
+ if(h&&!h.querySelector('.dm-lockup'))h.innerHTML='<span class="dm-lockup"><img src="./downmetric-shield-approved.png?v=29" alt="DownMetric"><span class="dm-lockup-copy"><span class="dm-lockup-name">DOWN<span>METRIC</span></span><span class="dm-lockup-tag">Fantasy Football Intelligence</span></span></span>';
+ const existing=h?.querySelector('.dm-lockup img');if(existing){existing.src='./downmetric-shield-approved.png?v=29';existing.style.objectFit='contain';existing.style.objectPosition='center center';existing.style.transform='none';}
  const sub=document.getElementById('subtitle');if(sub&&!sub.dataset.dmTheme){sub.dataset.dmTheme='1';sub.textContent='DRAFT SMARTER • MANAGE SMARTER • WIN MORE'}
  const recTitle=document.getElementById('recs')?.closest('.card')?.querySelector('h2');if(recTitle)recTitle.textContent='Recommended Picks';
  const m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content','#07100a');
