@@ -96,8 +96,24 @@ function dmRenderFast(){
   $('recs').innerHTML=top.map((x,i)=>{const p=x.p;const score=Math.max(1,Math.min(99,dmScoreRow(x)+Math.round(x.needBoost*.35)));return `<div class="rec"><span class="score">${score}</span><b>${i===0?'★ ':''}${name(p)}</b><div class="meta">${p.position} • ${p.team||'FA'} • Board #${Math.round(x.blend)}${x.needBoost?` • Need +${x.needBoost}`:''}</div><div class="small" style="margin-top:7px">${x.reason}</div><button style="margin-top:8px" onclick="add('${p.player_id}',state.slot,state.overall)">Draft for my team</button></div>`}).join('');
   $('log').innerHTML=state.drafted.slice().sort((a,b)=>b.overall-a.overall).map(x=>{const p=playerById.get(x.id);return `<div class="pick">#${x.overall} ${p?name(p):x.id} • Slot ${x.slot}${x.slot===state.slot?' • YOU':''}</div>`}).join('');
 }
+function dmFixBrandAlignment(){
+  let s=document.getElementById('dmLogoAlignFix');
+  if(!s){s=document.createElement('style');s.id='dmLogoAlignFix';document.head.appendChild(s)}
+  s.textContent=`
+  .dm-lockup{display:grid!important;grid-template-columns:54px auto!important;column-gap:14px!important;align-items:center!important}
+  .dm-lockup img{align-self:center!important;justify-self:center!important;transform:translateY(1px)!important;object-position:center center!important}
+  .dm-lockup-copy{align-self:center!important;justify-self:start!important;transform:translateY(-1px)!important}
+  #subtitle{padding-left:68px!important}
+  @media(max-width:650px){
+    .dm-lockup{grid-template-columns:44px auto!important;column-gap:10px!important}
+    .dm-lockup img{transform:translateY(1px)!important}
+    .dm-lockup-copy{transform:none!important}
+    #subtitle{padding-left:54px!important}
+  }`;
+}
 function mount(){
   if(typeof state==='undefined'||typeof $!=='function'||!$('board'))return setTimeout(mount,50);
+  dmFixBrandAlignment();
   window.ranked=dmRankedFast;window.render=dmRenderFast;
   window.pickScore=p=>{const x=dmRankedFast().find(r=>r.p.player_id===p.player_id);return dmScoreRow(x)};
   $('search').oninput=dmRenderFast;$('pos').onchange=dmRenderFast;
