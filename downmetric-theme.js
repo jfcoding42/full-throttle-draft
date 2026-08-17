@@ -9,12 +9,12 @@ header{background:rgba(5,8,6,.96)!important;border-bottom:1px solid #1e2922!impo
 header .wrap{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(330px,470px)!important;grid-template-areas:"brand account" "sub account"!important;column-gap:28px!important;row-gap:6px!important;align-items:center!important;padding:18px 18px 16px!important}
 header h1{grid-area:brand!important;font-size:0!important;margin:0!important;text-transform:none!important;display:flex!important;align-items:center!important;min-width:0!important}
 .dm-lockup{display:flex;align-items:center;gap:14px;min-width:0}
-.dm-lockup img{width:54px;height:54px;display:block;object-fit:cover;border-radius:14px;flex:0 0 54px;box-shadow:0 0 0 1px rgba(85,190,66,.22),0 8px 26px rgba(0,0,0,.28)}
+.dm-lockup img{width:60px;height:60px;display:block;object-fit:contain;border-radius:0!important;flex:0 0 60px;box-shadow:none!important}
 .dm-lockup-copy{display:flex;flex-direction:column;justify-content:center;min-width:0;line-height:1}
 .dm-lockup-name{font-size:25px;font-weight:900;letter-spacing:-.045em;font-style:italic;color:#f4f6f4;white-space:nowrap}
 .dm-lockup-name span{color:#4fc43a}
 .dm-lockup-tag{font-size:9px;margin-top:6px;letter-spacing:.17em;text-transform:uppercase;color:#8f9a93;white-space:nowrap}
-#subtitle{grid-area:sub!important;margin:0!important;color:#7f8b84!important;font-size:10px!important;font-weight:650!important;letter-spacing:.12em!important;text-transform:uppercase!important}
+#subtitle{grid-area:sub!important;margin:0 0 0 74px!important;color:#7f8b84!important;font-size:10px!important;font-weight:650!important;letter-spacing:.12em!important;text-transform:uppercase!important}
 #dmAccount{grid-area:account!important;margin:0!important;min-width:0!important}
 #dmAccount .call{margin:0!important;background:#090d0a!important;border:1px solid #243128!important;border-radius:12px!important;box-shadow:none!important;padding:10px 11px!important}
 #dmAccount .small{color:#87928b!important}
@@ -74,10 +74,10 @@ button:active{transform:translateY(0)}
  body{background:linear-gradient(180deg,#040604 0%,#07100a 52%,#040604 100%)!important}
  header .wrap{padding:13px 12px 12px!important}
  .dm-lockup{gap:10px!important}
- .dm-lockup img{width:44px;height:44px;flex-basis:44px;border-radius:11px!important}
+ .dm-lockup img{width:50px;height:50px;flex-basis:50px!important;border-radius:0!important}
  .dm-lockup-name{font-size:20px!important}
  .dm-lockup-tag{font-size:7px!important;letter-spacing:.13em!important;margin-top:5px!important}
- #subtitle{font-size:8px!important;letter-spacing:.09em!important}
+ #subtitle{font-size:8px!important;letter-spacing:.09em!important;margin-left:60px!important}
  #dmAccount .row{grid-template-columns:1fr!important}
  #dmAccount button{width:100%!important}
  .dmnav{position:sticky!important;top:0!important;z-index:35!important;margin-top:0!important;padding:8px 12px!important;background:rgba(4,7,5,.96)!important;border-bottom:1px solid #1d2820!important;backdrop-filter:blur(12px)!important}
@@ -94,7 +94,8 @@ let s=document.getElementById('dmPremiumTheme');if(!s){s=document.createElement(
 function mount(){
  document.body.classList.add('dm-premium');
  const h=document.querySelector('header .wrap h1');
- if(h&&!h.querySelector('.dm-lockup'))h.innerHTML='<span class="dm-lockup"><img src="./icon-192.png?v=25" alt="DownMetric"><span class="dm-lockup-copy"><span class="dm-lockup-name">DOWN<span>METRIC</span></span><span class="dm-lockup-tag">Fantasy Football Intelligence</span></span></span>';
+ if(h&&!h.querySelector('.dm-lockup'))h.innerHTML='<span class="dm-lockup"><img src="./downmetric-logo.png?v=28" alt="DownMetric"><span class="dm-lockup-copy"><span class="dm-lockup-name">DOWN<span>METRIC</span></span><span class="dm-lockup-tag">Fantasy Football Intelligence</span></span></span>';
+ const existing=h?.querySelector('.dm-lockup img');if(existing)existing.src='./downmetric-logo.png?v=28';
  const sub=document.getElementById('subtitle');if(sub&&!sub.dataset.dmTheme){sub.dataset.dmTheme='1';sub.textContent='DRAFT SMARTER • MANAGE SMARTER • WIN MORE'}
  const recTitle=document.getElementById('recs')?.closest('.card')?.querySelector('h2');if(recTitle)recTitle.textContent='Recommended Picks';
  const m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content','#07100a');
