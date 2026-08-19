@@ -31,5 +31,5 @@ function mount(){
  const m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content','#07100a');
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();setTimeout(mount,250);setTimeout(mount,900);
-const perf=document.createElement('script');perf.src='./downmetric-performance.js?v=27';perf.defer=true;document.head.appendChild(perf);
+const perf=document.createElement('script');perf.src='./downmetric-performance.js?v=28';perf.defer=true;document.head.appendChild(perf);
 })();
