@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T17:50:21.665Z",
+  "updated_at": "2026-09-05T16:49:29.177Z",
   "source": "The Odds API consensus",
   "mode": "team lines + available player props",
   "teams": {
@@ -702,13 +702,13 @@
       "name": "Tyler Higbee",
       "position": "TE",
       "team": "LAR",
-      "signal": 0.56,
+      "signal": 0.2,
       "team_implied": 23.75,
       "game_total": 44.5,
       "team_spread": -3,
       "props": {
         "combined_yards": null,
-        "receptions": null
+        "receptions": 1.5
       }
     },
     "3286": {
@@ -1040,13 +1040,13 @@
       "name": "George Kittle",
       "position": "TE",
       "team": "SF",
-      "signal": 1.44,
+      "signal": 1.62,
       "team_implied": 26.5,
       "game_total": 44.5,
       "team_spread": -8.5,
       "props": {
         "combined_yards": null,
-        "receptions": null
+        "receptions": 4.5
       }
     },
     "4219": {
@@ -1564,19 +1564,6 @@
       "team_implied": 21.5,
       "game_total": 41.5,
       "team_spread": -1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
-    "5096": {
-      "name": "Ray-Ray McCloud",
-      "position": "WR",
-      "team": "CHI",
-      "signal": -0.32,
-      "team_implied": 21,
-      "game_total": 43.5,
-      "team_spread": 1.5,
       "props": {
         "combined_yards": null,
         "receptions": null
@@ -2570,19 +2557,6 @@
         "receptions": null
       }
     },
-    "6843": {
-      "name": "Albert Okwuegbunam",
-      "position": "TE",
-      "team": "LV",
-      "signal": -1.92,
-      "team_implied": 16,
-      "game_total": 40.5,
-      "team_spread": 8.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
     "6847": {
       "name": "Devin Duvernay",
       "position": "WR",
@@ -2717,13 +2691,13 @@
       "name": "Rico Dowdle",
       "position": "RB",
       "team": "PIT",
-      "signal": -0.96,
+      "signal": -1.32,
       "team_implied": 19,
       "game_total": 43.5,
       "team_spread": 5.5,
       "props": {
         "combined_yards": null,
-        "receptions": null
+        "receptions": 1.5
       }
     },
     "7039": {
@@ -3302,13 +3276,13 @@
       "name": "Pat Freiermuth",
       "position": "TE",
       "team": "PIT",
-      "signal": -0.96,
+      "signal": -1.14,
       "team_implied": 19,
       "game_total": 43.5,
       "team_spread": 5.5,
       "props": {
         "combined_yards": null,
-        "receptions": null
+        "receptions": 2.5
       }
     },
     "7602": {
@@ -4104,6 +4078,19 @@
         "receptions": null
       }
     },
+    "8170": {
+      "name": "James Mitchell",
+      "position": "TE",
+      "team": "DAL",
+      "signal": 1.12,
+      "team_implied": 25.5,
+      "game_total": 49.5,
+      "team_spread": -1.5,
+      "props": {
+        "combined_yards": null,
+        "receptions": null
+      }
+    },
     "8172": {
       "name": "Greg Dulcich",
       "position": "TE",
@@ -4158,7 +4145,7 @@
     },
     "8181": {
       "name": "Connor Heyward",
-      "position": "TE",
+      "position": "RB",
       "team": "LV",
       "signal": -1.92,
       "team_implied": 16,
@@ -4394,13 +4381,13 @@
       "name": "Jaylen Warren",
       "position": "RB",
       "team": "PIT",
-      "signal": -0.96,
+      "signal": -1.14,
       "team_implied": 19,
       "game_total": 43.5,
       "team_spread": 5.5,
       "props": {
         "combined_yards": null,
-        "receptions": null
+        "receptions": 2.5
       }
     },
     "8230": {
@@ -4476,19 +4463,6 @@
       "team_implied": 22.5,
       "game_total": 43.5,
       "team_spread": -1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
-    "8413": {
-      "name": "Chris Oladokun",
-      "position": "QB",
-      "team": "KC",
-      "signal": 0.8,
-      "team_implied": 24.5,
-      "game_total": 40.5,
-      "team_spread": -8.5,
       "props": {
         "combined_yards": null,
         "receptions": null
@@ -4697,6 +4671,19 @@
       "team_implied": 25.5,
       "game_total": 49.5,
       "team_spread": -1.5,
+      "props": {
+        "combined_yards": null,
+        "receptions": null
+      }
+    },
+    "8924": {
+      "name": "Thomas Odukoya",
+      "position": "TE",
+      "team": "KC",
+      "signal": 0.8,
+      "team_implied": 24.5,
+      "game_total": 40.5,
+      "team_spread": -8.5,
       "props": {
         "combined_yards": null,
         "receptions": null
@@ -5295,6 +5282,19 @@
       "team_implied": 24,
       "game_total": 46.5,
       "team_spread": -1.5,
+      "props": {
+        "combined_yards": null,
+        "receptions": null
+      }
+    },
+    "10221": {
+      "name": "Ronnie Bell",
+      "position": "WR",
+      "team": "LV",
+      "signal": -1.92,
+      "team_implied": 16,
+      "game_total": 40.5,
+      "team_spread": 8.5,
       "props": {
         "combined_yards": null,
         "receptions": null
@@ -7237,19 +7237,6 @@
         "receptions": null
       }
     },
-    "12476": {
-      "name": "Devin Neal",
-      "position": "RB",
-      "team": "NO",
-      "signal": -0.32,
-      "team_implied": 21,
-      "game_total": 43.5,
-      "team_spread": 1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
     "12477": {
       "name": "Kurtis Rourke",
       "position": "QB",
@@ -7848,19 +7835,6 @@
         "receptions": 1.5
       }
     },
-    "12530": {
-      "name": "Travis Hunter",
-      "position": "WR",
-      "team": "JAX",
-      "signal": 0.16,
-      "team_implied": 22.5,
-      "game_total": 46.5,
-      "team_spread": 1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
     "12531": {
       "name": "Trevor Etienne",
       "position": "RB",
@@ -7921,6 +7895,19 @@
       "team_implied": 23.25,
       "game_total": 39.5,
       "team_spread": -7,
+      "props": {
+        "combined_yards": null,
+        "receptions": null
+      }
+    },
+    "12538": {
+      "name": "Brady Cook",
+      "position": "QB",
+      "team": "MIA",
+      "signal": -1.92,
+      "team_implied": 16,
+      "game_total": 42.5,
+      "team_spread": 10.5,
       "props": {
         "combined_yards": null,
         "receptions": null
@@ -8524,19 +8511,6 @@
         "receptions": null
       }
     },
-    "12946": {
-      "name": "Dontae Fleming",
-      "position": "WR",
-      "team": "MIN",
-      "signal": 0.16,
-      "team_implied": 22.5,
-      "game_total": 43.5,
-      "team_spread": -1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
     "12969": {
       "name": "Lan Larison",
       "position": "RB",
@@ -8849,19 +8823,6 @@
         "receptions": null
       }
     },
-    "13227": {
-      "name": "Mitch Van Vooren",
-      "position": "WR",
-      "team": "DAL",
-      "signal": 1.12,
-      "team_implied": 25.5,
-      "game_total": 49.5,
-      "team_spread": -1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
     "13249": {
       "name": "Thomas Gordon",
       "position": "TE",
@@ -9074,13 +9035,13 @@
       "name": "Jadarian Price",
       "position": "RB",
       "team": "SEA",
-      "signal": -0.4,
+      "signal": -0.76,
       "team_implied": 20.75,
       "game_total": 44.5,
       "team_spread": 3,
       "props": {
         "combined_yards": null,
-        "receptions": null
+        "receptions": 1.5
       }
     },
     "13287": {
@@ -9772,6 +9733,19 @@
         "receptions": null
       }
     },
+    "13400": {
+      "name": "Justin Joly",
+      "position": "TE",
+      "team": "MIA",
+      "signal": -1.92,
+      "team_implied": 16,
+      "game_total": 42.5,
+      "team_spread": 10.5,
+      "props": {
+        "combined_yards": null,
+        "receptions": null
+      }
+    },
     "13401": {
       "name": "Michael Trigg",
       "position": "TE",
@@ -9845,19 +9819,6 @@
       "team_implied": 22.5,
       "game_total": 46.5,
       "team_spread": 1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
-    "13410": {
-      "name": "Chase Roberts",
-      "position": "WR",
-      "team": "LV",
-      "signal": -1.92,
-      "team_implied": 16,
-      "game_total": 40.5,
-      "team_spread": 8.5,
       "props": {
         "combined_yards": null,
         "receptions": null
@@ -10383,19 +10344,6 @@
         "receptions": null
       }
     },
-    "13604": {
-      "name": "Sincere Brown",
-      "position": "WR",
-      "team": "LAC",
-      "signal": -0.64,
-      "team_implied": 20,
-      "game_total": 41.5,
-      "team_spread": 1.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
     "13621": {
       "name": "Dillon Bell",
       "position": "WR",
@@ -10526,19 +10474,6 @@
         "receptions": null
       }
     },
-    "13725": {
-      "name": "Dominic Richardson",
-      "position": "RB",
-      "team": "NYJ",
-      "signal": -1.68,
-      "team_implied": 16.75,
-      "game_total": 43.5,
-      "team_spread": 10,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
     "13726": {
       "name": "Camden Brown",
       "position": "WR",
@@ -10586,19 +10521,6 @@
       "team_implied": 25,
       "game_total": 47.5,
       "team_spread": -2.5,
-      "props": {
-        "combined_yards": null,
-        "receptions": null
-      }
-    },
-    "13778": {
-      "name": "EJ Smith",
-      "position": "RB",
-      "team": "KC",
-      "signal": 1.48,
-      "team_implied": 24.5,
-      "game_total": 40.5,
-      "team_spread": -8.5,
       "props": {
         "combined_yards": null,
         "receptions": null
